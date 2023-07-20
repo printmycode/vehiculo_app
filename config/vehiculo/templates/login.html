@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container d-flex justify-content-center align-items-center flex-column">
+        <h2 class="pt-4 pb-3">Iniciar sesión</h2>
+        <div class="card col-4">
+            <form class="py-4 px-4" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="text-center mt-3">
+                    <button class="btn btn-primary" type="submit">Iniciar sesión</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

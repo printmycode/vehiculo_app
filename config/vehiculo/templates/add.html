@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="container d-flex justify-content-center align-items-center flex-column">
+        <h1 class="pt-4 pb-3">Formulario de Ingreso de Vehículos</h1>
+        <div class="card col-4">
+            <form class="py-4 px-4" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="text-center mt-3">
+                    <button class="btn btn-primary" type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+{% endblock %}
+
+
